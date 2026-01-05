@@ -118,7 +118,7 @@ def home():
     </html>
     """
     # Reemplaza {url_netlify} con la URL que tendrá tu frontend (una vez lo subas a Netlify)
-    return html_base.format(url_netlify="https://tu-frontend-en-netlify.app")
+    return html_base.format(url_netlify="https://vocal-cobbler-7a48f5.netlify.app/")
 
 @app.route('/consulta', methods=['POST'])
 def consultar():
