@@ -47,7 +47,7 @@ HTML_RESPUESTA = """
     <title>Respuesta del Logos</title>
     <meta charset="UTF-8">
     <style>
-        body {{ font-family: monospace; max-width: 900px; margin: auto; padding: 20px; }}
+        body { font-family: monospace; max-width: 900px; margin: auto; padding: 20px; }
         .nuevo-chat-btn {{
             position: fixed; top: 15px; right: 15px;
             padding: 8px 15px; background: #f0f0f0; border: 1px solid #ccc; cursor: pointer;
