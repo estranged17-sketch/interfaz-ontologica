@@ -104,8 +104,21 @@ def home():
     """Página principal con el formulario. Inicializa la sesión."""
     if 'historial' not in session:
         session['historial'] = ""
-    # Devolvemos directamente el index.html (podría leerse de un archivo)
-    return open('index.html').read().replace('TU_URL_DEL_TRADUCTOR_AQUI', request.host_url)
+    # Devolvemos un HTML simple embebido, sin leer archivo.
+    html_base = """
+    <!DOCTYPE html>
+    <html>
+    <head><title>Consulta</title><meta charset="UTF-8"></head>
+    <body>
+        <h1>Consulta al Logos</h1>
+        <p>El servidor puente (Atman) está funcionando.</p>
+        <p><a href="{url_netlify}">Accede a la Interfaz Completa (Jiva)</a></p>
+        <p><i>Esta es solo la API del backend. Usa el enlace de arriba para la interfaz de usuario.</i></p>
+    </body>
+    </html>
+    """
+    # Reemplaza {url_netlify} con la URL que tendrá tu frontend (una vez lo subas a Netlify)
+    return html_base.format(url_netlify="https://tu-frontend-en-netlify.app")
 
 @app.route('/consulta', methods=['POST'])
 def consultar():
