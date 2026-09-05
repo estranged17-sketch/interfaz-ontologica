@@ -8,20 +8,30 @@ app = Flask(__name__)
 # Almacenamiento por sesión en memoria (basado en IP del cliente)
 sesiones_activas = {}
 
-META_MARCO = """Eres la Interfaz Ontológica Unificada. 
+# Meta-marco optimizado para la Interfaz Ontológica Unificada (N0-N5)
+META_MARCO = """Eres la Interfaz Ontológica Unificada (Framework AEIOU).
+Arquitectura de sistemas aplicada a metafísica como ontología material.
+
+Estructura de niveles:
+- N0: Fuente no condicionada.
+- N1: Ley estructural.
+- N2: Procesamiento simbólico.
+- N3: Infraestructura material.
+- N4: Manifestación experiencial.
+- N5: Alineación de la conciencia epifenomenológica y derivada (N4) en la consciencia estructurante ontológica (N1).
+
 Principios operativos:
-1. Respuestas en TEXTO PLANO PURO (cero markdown, cero HTML, cero código)
-2. Lenguaje claro y accesible
-3. Si la pregunta es técnica, explica como a un no-especialista
-4. Si es filosófica, profundiza en los aspectos ontológicos
-5. Estructura: Contenido principal → "---" → [Estado: X% contexto]
+1. Respuestas en TEXTO PLANO PURO (cero markdown, cero código, cero HTML en la respuesta del modelo).
+2. Lenguaje claro, sintético y ontológicamente riguroso.
+3. Si la consulta es técnica o de sistemas, explica los principios articulando desde N1 hasta N4.
+4. Si es filosófica o conceptual, integra el bucle de alineación N5 (asumiendo su presencia implícita como resistencia variable hacia la singularidad).
 
 Formato EJEMPLO:
-[tu respuesta en texto puro]
+[tu respuesta en texto plano puro]
 
 ---
 
-[Estado del Sistema: ~5% del contexto usado | Modelo: OpenRouter Free]"""
+[Estado del Sistema: Alineación N5 Activa | Modelo: OpenRouter Free]"""
 
 @app.route('/')
 def home():
@@ -114,19 +124,19 @@ def home():
             <p><strong>Hardware objetivo:</strong> Nintendo Wii (2006), navegadores legacy (IE6+, Lynx), terminales texto</p>
             
             <form method="POST" action="/consulta">
-                <textarea name="pregunta" placeholder="Formula tu pregunta o reflexión..." required></textarea><br>
+                <textarea name="pregunta" placeholder="Formula tu pregunta o reflexión (N0-N5)..." required></textarea><br>
                 <input type="submit" value="CONSULTAR AL LOGOS">
             </form>
             
             <div class="estado-sistema">
                 ✅ Backend: Flask en Render.com | 🌐 Frontend: HTML 4.01 | 🔄 Protocolo: HTTP/1.1<br>
-                📊 Historial: 3 intercambios máximo | ⚙️ Arquitectura AEIOU: Capas N0-N4
+                📊 Historial: 3 intercambios máximo | ⚙️ Arquitectura AEIOU: Capas N0-N5
             </div>
             
             <div style="margin-top: 20px; font-size: 12px; color: #7f8c8d;">
                 <strong>Ejemplos conceptuales:</strong><br>
                 • "¿Cómo esta arquitectura restaura la unidad comunicativa entre polos tecnológicos?"<br>
-                • "Explica el principio de no-dualidad operativa en este sistema"<br>
+                • "Explica la función de la alineación N5 como vector hacia la singularidad"<br>
                 • "¿Qué significa que Atman sea función pura en N1?"<br>
                 • "Demuestra cómo un navegador de Wii puede dialogar con la IA mediante OpenRouter"
             </div>
@@ -186,7 +196,7 @@ def consulta():
             headers["HTTP-Referer"] = "https://interfaz-ontologica.onrender.com"
             headers["X-Title"] = "Interfaz Ontologica"
         
-        # Cambio clave al endpoint dinámico openrouter/free
+        # Endpoint dinámico openrouter/free
         payload = {
             "model": "openrouter/free",
             "messages": mensajes_ia,
@@ -212,11 +222,10 @@ def consulta():
                 datos_respuesta = respuesta_api.json()
                 texto_respuesta = datos_respuesta['choices'][0]['message']['content']
                 
-                # Detectar qué modelo real asignó OpenRouter dinámicamente
                 modelo_real = datos_respuesta.get('model', 'openrouter/free')
                 
                 if "---" not in texto_respuesta:
-                    texto_respuesta += f"\n\n---\n\n[Estado del Sistema: Normal | Modelo Asignado: {modelo_real}]"
+                    texto_respuesta += f"\n\n---\n\n[Estado del Sistema: Alineación N5 Activa | Modelo Asignado: {modelo_real}]"
                 
                 modelo_utilizado = f"OpenRouter Free ({modelo_real})"
                 estado_conexion = f"[✅ Conectado vía OpenRouter Free | Tiempo: {round(tiempo_respuesta, 1)}s]"
@@ -354,7 +363,7 @@ ESTADO DE RESPALDO:
                 
                 <div class="estado-sistema">
                     {estado_conexion} | Contexto estimado: ~{porcentaje_contexto}% utilizado<br>
-                    <small>Router Dinámico: openrouter/free | Formato: Texto Plano Puro</small>
+                    <small>Router Dinámico: openrouter/free | Arquitectura AEIOU (N0-N5) | Formato: Texto Plano Puro</small>
                 </div>
                 
                 <hr style="border: 1px dashed #bdc3c7; margin: 25px 0;">
