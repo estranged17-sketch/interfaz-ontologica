@@ -205,7 +205,7 @@ def consulta():
         
         # Parámetros optimizados para MiMo-V2-Flash
         payload = {
-            "model": "xiaomi/mimo-v2-flash:free",  # MODELO DE 309B PARÁMETROS
+            "model": "openrouter/free",  # MODELO Dinamico Free
             "messages": mensajes_ia,
             "max_tokens": 1200,  # Tokens ampliados para respuestas detalladas
             "temperature": 0.7,
